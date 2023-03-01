@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+
+.form {
+  font-family: 'Roboto', sans-serif;
+  margin-left: 300px;
+}
+
+.form h2 {
+  font-size: 25px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form form > input {
+  font-family: 'Roboto', sans-serif;
+  width: 400px;
+  height: 25px;
+}
+
+.form form > textarea {
+  font-family: 'Roboto', sans-serif;
+  width: 400px;
+  height: 100px;
+}
