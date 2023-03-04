@@ -1,67 +1,67 @@
 import React from 'react'
 
-const ExperienceForm = ({ exp, experinceData, setExperienceData }) => {
+const EducationForm = ({ edu, educationData, setEducationData }) => {
   const onChange = (e) => {
-    const newState = experinceData.map((obj) => {
-      if (obj.id === exp.id) {
+    const newState = educationData.map((obj) => {
+      if (obj.id === edu.id) {
         return {
-          ...exp,
+          ...edu,
           [e.target.name]: [e.target.value],
         }
       }
       return obj
     })
-    setExperienceData(newState)
+    setEducationData(newState)
   }
 
-  const deleteExp = () => {
-    const newState = experinceData.filter((obj) => obj.id !== exp.id)
-    setExperienceData(newState)
+  const deleteEdu = () => {
+    const newState = educationData.filter((obj) => obj.id !== edu.id)
+    setEducationData(newState)
   }
 
   return (
     <div className='form'>
-      <h2>Experience</h2>
+      <h2>Education</h2>
       <form>
         <input
           type='text'
-          name='company'
-          value={exp.company}
-          placeholder='Company'
+          name='course'
+          value={edu.course}
+          placeholder='Course'
           onChange={onChange}
         />
         <input
           type='text'
-          name='position'
-          value={exp.position}
-          placeholder='position'
+          name='institution'
+          value={edu.institution}
+          placeholder='Institution'
           onChange={onChange}
         />
         <input
           type='date'
           name='startDate'
-          value={exp.startDate}
+          value={edu.startDate}
           placeholder='Start Date'
           onChange={onChange}
         />
         <input
           name='endDate'
           type='Date'
-          value={exp.endDate}
+          value={edu.endDate}
           placeholder='End Date'
           onChange={onChange}
         />
         <input
           type='text'
           name='description'
-          value={exp.description}
+          value={edu.description}
           placeholder='Description'
           onChange={onChange}
         />
       </form>
-      <button onClick={deleteExp}>Delete</button>
+      <button onClick={deleteEdu}>Delete</button>
     </div>
   )
 }
 
-export default ExperienceForm
+export default EducationForm

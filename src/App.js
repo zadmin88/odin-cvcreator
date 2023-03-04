@@ -3,6 +3,7 @@ import { PersonalDataForm } from './components/PersonalDataForm'
 import '../src/styles/main.css'
 import { MainCV } from './components/MainCV'
 import ExperienceForm from './components/ExperienceForm'
+import EducationForm from './components/EducationForm'
 import { v4 as uuidv4 } from 'uuid'
 
 function App() {
@@ -69,9 +70,22 @@ function App() {
         )
       })}
       <button onClick={showFormExp}>Add experience</button>
-
+      {educationData.map((edu) => {
+        return (
+          <EducationForm
+            key={edu.id}
+            educationData={educationData}
+            edu={edu}
+            setEducationData={setEducationData}
+          />
+        )
+      })}
       <button onClick={showFormEdu}>Add Education</button>
-      <MainCV personalData={personalData} experienceData={experienceData} />
+      <MainCV
+        personalData={personalData}
+        experienceData={experienceData}
+        educationData={educationData}
+      />
     </div>
   )
 }
