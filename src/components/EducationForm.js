@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/formStyles.css'
 
 const EducationForm = ({ edu, educationData, setEducationData }) => {
   const onChange = (e) => {
@@ -49,13 +50,6 @@ const EducationForm = ({ edu, educationData, setEducationData }) => {
           type='Date'
           value={edu.endDate}
           placeholder='End Date'
-          onChange={onChange}
-        />
-        <input
-          type='text'
-          name='description'
-          value={edu.description}
-          placeholder='Description'
           onChange={onChange}
         />
       </form>

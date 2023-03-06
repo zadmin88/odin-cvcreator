@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/formStyles.css'
 
 const ExperienceForm = ({ exp, experinceData, setExperienceData }) => {
   const onChange = (e) => {

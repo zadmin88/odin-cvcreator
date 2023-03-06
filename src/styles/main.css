@@ -127,3 +127,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+.App {
+  display: grid;
+  grid-template-columns: 500px 842px;
+  /* align-items: center; */
+  justify-content: center;
+}

@@ -13,7 +13,8 @@ function App() {
     phone: '',
     email: '',
     location: '',
-    description: '',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat id reiciendis saepe enim iste nesciunt repellat laborum in minus optio, sit et qui laudantium. Quibusdam inventore quasi cupiditate? Libero asperiores ea rem commodi voluptatum minima soluta non harum saepe fuga! Impedit officiis, non quia corrupti aspernatur eligendi error laboriosam totam.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eaque quas ipsa earum deserunt amet quisquam animi quibusdam suscipit asperiores quam eveniet neque pariatur voluptatem ut qui dicta, optio fuga.',
   })
 
   const [experienceData, setExperienceData] = useState([])
@@ -54,33 +55,35 @@ function App() {
 
   return (
     <div className='App'>
-      <PersonalDataForm
-        personalData={personalData}
-        changePersonalData={changePersonalData}
-      />
+      <div className='formsDiv'>
+        <PersonalDataForm
+          personalData={personalData}
+          changePersonalData={changePersonalData}
+        />
 
-      {experienceData.map((exp) => {
-        return (
-          <ExperienceForm
-            key={exp.id}
-            experinceData={experienceData}
-            exp={exp}
-            setExperienceData={setExperienceData}
-          />
-        )
-      })}
-      <button onClick={showFormExp}>Add experience</button>
-      {educationData.map((edu) => {
-        return (
-          <EducationForm
-            key={edu.id}
-            educationData={educationData}
-            edu={edu}
-            setEducationData={setEducationData}
-          />
-        )
-      })}
-      <button onClick={showFormEdu}>Add Education</button>
+        {experienceData.map((exp) => {
+          return (
+            <ExperienceForm
+              key={exp.id}
+              experinceData={experienceData}
+              exp={exp}
+              setExperienceData={setExperienceData}
+            />
+          )
+        })}
+        <button onClick={showFormExp}>Add experience</button>
+        {educationData.map((edu) => {
+          return (
+            <EducationForm
+              key={edu.id}
+              educationData={educationData}
+              edu={edu}
+              setEducationData={setEducationData}
+            />
+          )
+        })}
+        <button onClick={showFormEdu}>Add Education</button>
+      </div>
       <MainCV
         personalData={personalData}
         experienceData={experienceData}
