@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/odin-cvcreator/static/css/main.d8318f0d.css",
+    "main.js": "/odin-cvcreator/static/js/main.109316f3.js",
+    "index.html": "/odin-cvcreator/index.html",
+    "static/media/phonecall.svg": "/odin-cvcreator/static/media/phonecall.633d98dbae2cccb0b7bf13dd049452b0.svg",
+    "static/media/mail.svg": "/odin-cvcreator/static/media/mail.752462ce89aa3592a5c63e1bfb8072ec.svg",
+    "static/media/mappin.svg": "/odin-cvcreator/static/media/mappin.16d224d6fa82f78dde3d2964c7fdc5a2.svg",
+    "main.d8318f0d.css.map": "/odin-cvcreator/static/css/main.d8318f0d.css.map",
+    "main.109316f3.js.map": "/odin-cvcreator/static/js/main.109316f3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8318f0d.css",
+    "static/js/main.109316f3.js"
+  ]
+}
